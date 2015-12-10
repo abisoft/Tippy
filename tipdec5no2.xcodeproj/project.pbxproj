@@ -14,6 +14,7 @@
 		0FDF7FE81C13C40F00AE7B5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FDF7FE61C13C40F00AE7B5D /* LaunchScreen.storyboard */; };
 		0FDF7FF31C13C40F00AE7B5D /* tipdec5no2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF7FF21C13C40F00AE7B5D /* tipdec5no2Tests.swift */; };
 		0FDF7FFE1C13C40F00AE7B5D /* tipdec5no2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF7FFD1C13C40F00AE7B5D /* tipdec5no2UITests.swift */; };
+		0FDF800E1C13D9DC00AE7B5D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF800D1C13D9DC00AE7B5D /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		0FDF7FF91C13C40F00AE7B5D /* tipdec5no2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipdec5no2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FDF7FFD1C13C40F00AE7B5D /* tipdec5no2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipdec5no2UITests.swift; sourceTree = "<group>"; };
 		0FDF7FFF1C13C40F00AE7B5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FDF800D1C13D9DC00AE7B5D /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				0FDF7FDD1C13C40F00AE7B5D /* AppDelegate.swift */,
 				0FDF7FDF1C13C40F00AE7B5D /* ViewController.swift */,
 				0FDF7FE11C13C40F00AE7B5D /* Main.storyboard */,
+				0FDF800D1C13D9DC00AE7B5D /* SettingViewController.swift */,
 				0FDF7FE41C13C40F00AE7B5D /* Assets.xcassets */,
 				0FDF7FE61C13C40F00AE7B5D /* LaunchScreen.storyboard */,
 				0FDF7FE91C13C40F00AE7B5D /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				0FDF7FE01C13C40F00AE7B5D /* ViewController.swift in Sources */,
 				0FDF7FDE1C13C40F00AE7B5D /* AppDelegate.swift in Sources */,
+				0FDF800E1C13D9DC00AE7B5D /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +393,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -398,9 +403,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = tipdec5no2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = abisoft.tipdec5no2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -409,9 +416,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = tipdec5no2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = abisoft.tipdec5no2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -482,6 +491,7 @@
 				0FDF80041C13C40F00AE7B5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0FDF80051C13C40F00AE7B5D /* Build configuration list for PBXNativeTarget "tipdec5no2Tests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +500,7 @@
 				0FDF80071C13C40F00AE7B5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0FDF80081C13C40F00AE7B5D /* Build configuration list for PBXNativeTarget "tipdec5no2UITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +509,7 @@
 				0FDF800A1C13C40F00AE7B5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
