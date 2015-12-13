@@ -10,10 +10,26 @@ import UIKit
 
 class SettingViewController: UIViewController {
 
+    @IBOutlet weak var segControl: UISegmentedControl!
+    var lowestTip : Float!
+    var midTip : Float!
+    var highestTip : Float!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let UserDefaults = NSUserDefaults.standardUserDefaults()
+         lowestTip = UserDefaults.floatForKey("lowest_tip")
+         midTip =  UserDefaults.floatForKey("mid_tip")
+         highestTip = UserDefaults.floatForKey("highest_tip")
+        
+        segControl.setTitle("\(lowestTip)", forSegmentAtIndex: 0)
+        segControl.setTitle("\(midTip)", forSegmentAtIndex: 1)
+        segControl.setTitle("\(highestTip)", forSegmentAtIndex: 2)
+
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +38,11 @@ class SettingViewController: UIViewController {
     }
     
 
+    @IBAction func segControlTapped(sender: AnyObject) {
+        print(segControl.selectedSegmentIndex)
+        
+   
+    }
     /*
     // MARK: - Navigation
 

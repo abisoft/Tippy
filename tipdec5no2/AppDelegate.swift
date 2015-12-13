@@ -16,6 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        let UserDefaults = NSUserDefaults.standardUserDefaults()
+        var isFirstLoad = UserDefaults.boolForKey("is_first_load")
+  //     UserDefaults.floatForKey("lowest_tip")
+  //      UserDefaults.floatForKey("mid_tip")
+  //      UserDefaults.floatForKey("highest_tip")
+        if (isFirstLoad){
+            UserDefaults.setFloat(0.10, forKey: "lowest_tip")
+            UserDefaults.setFloat(0.15, forKey: "mid_tip")
+            UserDefaults.setFloat(0.20, forKey: "highest_tip")
+            UserDefaults.setBool(true, forKey: "is_first_load")
+            UserDefaults.synchronize()
+            
+        }
+
         return true
     }
 
