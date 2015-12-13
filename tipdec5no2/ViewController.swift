@@ -15,18 +15,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipcontrol: UISegmentedControl!
     @IBOutlet weak var totalLabel: UILabel!
     
+
+    
+    override func viewWillAppear(animated: Bool) {
+             super.viewWillAppear(animated)
+        print("view will appear")}
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        print("view did appear")
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillAppear(animated)
+        print("view will disappear")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("view did disappear")
+    }
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    
-    
-    tipLable.text = "$0.00"
-    totalLabel.text = "$0.00"
-    
-    
+        tipLable.text = "$0.00"
+        totalLabel.text = "$0.00"
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
