@@ -11,10 +11,16 @@ import UIKit
 class SettingViewController: UIViewController {
 
     @IBOutlet weak var segControl: UISegmentedControl!
+    
+    @IBOutlet weak var tipControl: UISlider!
+    
     var lowestTip : Float!
     var midTip : Float!
     var highestTip : Float!
     
+    @IBOutlet weak var sliderSlide: UISlider!
+    
+    @IBOutlet weak var percentageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,9 +43,37 @@ class SettingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func sliderSlide(sender: AnyObject) {
+        let tipPercentage = tipControl.value
+        percentageLabel.text = "\(tipPercentage * 100)%"
+        segControl.setTitle("\(tipPercentage * 100)%", forSegmentAtIndex: segControl.selectedSegmentIndex)
+        
+        if (segControl.selectedSegmentIndex == 0) {
+            lowestTip = sliderSlide.value
+            //UserDefaults.setFloat(lowestTip,"lowest_tip")
+        }
+        if (segControl.selectedSegmentIndex == 1) {
+            midTip = sliderSlide.value
+        }
+        if (segControl.selectedSegmentIndex == 2) {
+            highestTip = sliderSlide.value
+        }
+        
+        
+    }
 
     @IBAction func segControlTapped(sender: AnyObject) {
         print(segControl.selectedSegmentIndex)
+        
+        if (segControl.selectedSegmentIndex == 0) {
+            sliderSlide.value = lowestTip
+        }
+        if (segControl.selectedSegmentIndex == 1) {
+            sliderSlide.value = midTip
+        }
+        if (segControl.selectedSegmentIndex == 2) {
+            sliderSlide.value = highestTip
+        }
         
    
     }
