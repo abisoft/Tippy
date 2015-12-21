@@ -77,7 +77,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-GN-gR9">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-GN-gR9">
                                 <rect key="frame" x="38" y="260" width="251" height="29"/>
                                 <segments>
                                     <segment title="18%"/>
@@ -136,6 +136,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cafe-768771_1280 copy" translatesAutoresizingMaskIntoConstraints="NO" id="Lh0-4q-iLS">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="v7S-Sz-TCM">
                                 <rect key="frame" x="20" y="79" width="280" height="29"/>
                                 <segments>
@@ -147,12 +150,6 @@
                                     <action selector="segControlTapped:" destination="onw-2I-kQr" eventType="valueChanged" id="zpk-ZW-UV4"/>
                                 </connections>
                             </segmentedControl>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.25" minValue="0.0" maxValue="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-bo-4lp">
-                                <rect key="frame" x="18" y="182" width="284" height="31"/>
-                                <connections>
-                                    <action selector="sliderSlide:" destination="onw-2I-kQr" eventType="valueChanged" id="qMu-rG-Tk1"/>
-                                </connections>
-                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8L-I7-H0b">
                                 <rect key="frame" x="20" y="147" width="280" height="21"/>
                                 <attributedString key="attributedText">
@@ -165,9 +162,12 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cafe-768771_1280 copy" translatesAutoresizingMaskIntoConstraints="NO" id="Lh0-4q-iLS">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.25" minValue="0.0" maxValue="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-bo-4lp">
+                                <rect key="frame" x="18" y="182" width="284" height="31"/>
+                                <connections>
+                                    <action selector="sliderSlide:" destination="onw-2I-kQr" eventType="valueChanged" id="qMu-rG-Tk1"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
